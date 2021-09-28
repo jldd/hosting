@@ -13,7 +13,7 @@ Uninstall packages that may interfere with this setup:
 DEBIAN_FRONTEND=noninteractive apt-get purge -y apache2* resolvconf eatmydata exim4* imagemagick-6-common mysql-client* mysql-server* nginx* libnginx-mod* php7* && systemctl disable systemd-resolved.service && systemctl stop systemd-resolved.service
 ```
 
-If you have problems resolving hostnames after this step, temporarily switch to a public nameserver like 1.1.1.1 (from CloudFlare) or 8.8.8.8 (from Google)
+If you have problems resolving hostnames after this step, temporarily switch to a public nameserver like 1.1.1.1 (from CloudFlare) or 8.8.8.8 (from Google):
 
 ```
 rm /etc/resolv.conf && echo "nameserver 1.1.1.1" > /etc/resolv.conf
